@@ -14,6 +14,8 @@ import TailwindPortfolioFail from './components/blogs/TailwindPortfolioFail';
 const App: React.FC = () => {
   return (
     <div className="App">
+
+      
       <ScrollToTop /> {/* ✅ works properly now */}
 
       <Header />
@@ -30,5 +32,6 @@ const App: React.FC = () => {
     </div>
   );
 };
+
 
 export default App;

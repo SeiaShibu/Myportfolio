@@ -17,15 +17,14 @@ const Home: React.FC = () => {
       const el = document.getElementById(sectionId);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
-        navigate(location.pathname, { replace: true }); // clear state
+        navigate(location.pathname, { replace: true });
       }
     }
   }, [location]);
 
   return (
     <>
-
-      <section id="hero"><Hero /></section>
+      <section id="hero"><Hero /></section> {/* ✅ Fixed here */}
       <section id="about"><About /></section>
       <section id="skills"><Skills /></section>
       <section id="projects"><Projects /></section>

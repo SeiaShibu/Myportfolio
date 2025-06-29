@@ -10,30 +10,27 @@ import Contact from '../components/Contact';
 const Home: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
+useEffect(() => {
+  const sectionId = location.state?.scrollTo;
 
-  useEffect(() => {
-    const sectionId = location.state?.scrollTo;
+  const navEntry = performance.getEntriesByType('navigation')[0];
+  const isPopState =
+    navEntry && 'type' in navEntry && (navEntry as PerformanceNavigationTiming).type === 'reload';
 
-    // Check if this is a browser reload or fresh visit
-    const navEntry = performance.getEntriesByType('navigation')[0];
-    const isReload =
-      navEntry && 'type' in navEntry && (navEntry as PerformanceNavigationTiming).type === 'reload';
-
-    if (sectionId && !isReload) {
-      // Only scroll if it was navigation, not refresh
-      setTimeout(() => {
-        const el = document.getElementById(sectionId);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }
-        navigate(location.pathname, { replace: true }); // clear state
-      }, 0); // ⏱ small delay to ensure DOM is rendered
+  if (sectionId && !isPopState) {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+      navigate(location.pathname, { replace: true }); // clear state
     }
-  }, [location]);
+  }
+}, [location]);
+
+
 
   return (
     <>
-      <section id="hero"><Hero /></section>
+      <section id="hero"><Hero /></section> {/* ✅ Fixed here */}
       <section id="about"><About /></section>
       <section id="skills"><Skills /></section>
       <section id="projects"><Projects /></section>

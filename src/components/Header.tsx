@@ -44,25 +44,27 @@ const Header: React.FC = () => {
   }, [navItems]);
 
 
-
-  const handleNavClick = (item: { id: string; type: string }) => {
+const handleNavClick = (item: { id: string; type: string }) => {
   if (item.type === 'route') {
     navigate(`/${item.id}`);
   } else {
     if (isHome) {
-      const element = document.getElementById(item.id);
-      if (element) element.scrollIntoView({ behavior: 'smooth' });
+      const el = document.getElementById(item.id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
     } else {
-      // 👇 Only pass scrollTo if not "hero"
+      // 👇 ONLY pass scrollTo if not "hero"
       if (item.id !== 'hero') {
         navigate('/', { state: { scrollTo: item.id } });
       } else {
-        // Go home cleanly
+        // If user clicks "Home", just go to /
         navigate('/');
       }
     }
   }
-  setIsMenuOpen(false);
+
+  setIsMenuOpen(false); // close mobile menu
 };
 
 

@@ -10,21 +10,20 @@ import Contact from '../components/Contact';
 const Home: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
 useEffect(() => {
   const sectionId = location.state?.scrollTo;
-  if (sectionId) {
+
+  const navEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+  const isSPA = navEntry?.type === 'navigate';
+
+  if (sectionId && isSPA) {
     const el = document.getElementById(sectionId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
-      navigate(location.pathname, { replace: true }); // reset scrollTo state
     }
-  } else {
-    // scroll to top by default
-    window.scrollTo(0, 0);
+    navigate(location.pathname, { replace: true, state: {} });
   }
 }, [location]);
-
 
 
   return (

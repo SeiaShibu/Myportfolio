@@ -43,21 +43,29 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [navItems]);
 
+
+
   const handleNavClick = (item: { id: string; type: string }) => {
-    if (item.type === 'route') {
-      navigate(item.id);
+  if (item.type === 'route') {
+    navigate(`/${item.id}`);
+  } else {
+    if (isHome) {
+      const element = document.getElementById(item.id);
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
     } else {
-      if (isHome) {
-        const element = document.getElementById(item.id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      } else {
+      // 👇 Only pass scrollTo if not "hero"
+      if (item.id !== 'hero') {
         navigate('/', { state: { scrollTo: item.id } });
+      } else {
+        // Go home cleanly
+        navigate('/');
       }
     }
-    setIsMenuOpen(false);
-  };
+  }
+  setIsMenuOpen(false);
+};
+
+
 
   return (
     <header

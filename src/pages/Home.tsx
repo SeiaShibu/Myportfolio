@@ -11,16 +11,19 @@ const Home: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  useEffect(() => {
+useEffect(() => {
   const sectionId = location.state?.scrollTo;
   if (sectionId) {
     const el = document.getElementById(sectionId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
-      navigate(location.pathname, { replace: true }); // clear the state
+      navigate(location.pathname, { replace: true }); // reset scrollTo state
     }
+  } else {
+    // scroll to top by default
+    window.scrollTo(0, 0);
   }
-}, [location, navigate]);
+}, [location]);
 
 
 

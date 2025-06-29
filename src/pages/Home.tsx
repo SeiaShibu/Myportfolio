@@ -10,17 +10,21 @@ import Contact from '../components/Contact';
 const Home: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
-  useEffect(() => {
+useEffect(() => {
   const sectionId = location.state?.scrollTo;
-  if (sectionId) {
+
+  const navEntry = performance.getEntriesByType('navigation')[0];
+  const isPopState =
+    navEntry && 'type' in navEntry && (navEntry as PerformanceNavigationTiming).type === 'reload';
+
+  if (sectionId && !isPopState) {
     const el = document.getElementById(sectionId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
-      navigate(location.pathname, { replace: true }); // clear the state
+      navigate(location.pathname, { replace: true }); // clear state
     }
   }
-}, [location, navigate]);
+}, [location]);
 
 
 

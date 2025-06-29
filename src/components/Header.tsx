@@ -16,7 +16,7 @@ const Header: React.FC = () => {
     { id: 'about', label: 'About', type: 'scroll' },
     { id: 'skills', label: 'Skills', type: 'scroll' },
     { id: 'projects', label: 'Projects', type: 'scroll' },
-    { id: '/blogs', label: 'Blogs', type: 'route' },
+    { id: 'blogs', label: 'Blogs', type: 'route' },
     { id: 'contact', label: 'Contact', type: 'scroll' },
   ];
 

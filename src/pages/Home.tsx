@@ -12,15 +12,20 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const sectionId = location.state?.scrollTo;
-    if (sectionId) {
-      const el = document.getElementById(sectionId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-        navigate(location.pathname, { replace: true });
-      }
+  const sectionId = location.state?.scrollTo;
+  if (sectionId && performance.navigation.type === 1) { // reload
+    return; // skip scroll on hard refresh
+  }
+
+  if (sectionId) {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+      navigate(location.pathname, { replace: true });
     }
-  }, [location]);
+  }
+}, [location]);
+
 
   return (
     <>

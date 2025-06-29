@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://SeiaShibu.github.io",
+  "homepage": "https://SeiaShibu.github.io/Myportfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

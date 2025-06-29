@@ -24,7 +24,8 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <section id="home"><Hero /></section>
+
+      <section id="hero"><Hero /></section>
       <section id="about"><About /></section>
       <section id="skills"><Skills /></section>
       <section id="projects"><Projects /></section>

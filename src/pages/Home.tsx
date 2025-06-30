@@ -10,25 +10,25 @@ import Contact from '../components/Contact';
 const Home: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
-useEffect(() => {
-  const sectionId = location.state?.scrollTo;
 
-  const navEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  const isSPA = navEntry?.type === 'navigate';
+  useEffect(() => {
+    const sectionId = location.state?.scrollTo;
 
-  if (sectionId && isSPA) {
-    const el = document.getElementById(sectionId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+    // ✅ Scroll only if it's NOT the hero section
+    if (location.pathname === '/' && sectionId && sectionId !== 'hero') {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      // ✅ Clear state so it doesn’t re-trigger on refresh
+      navigate(location.pathname, { replace: true, state: {} });
     }
-    navigate(location.pathname, { replace: true, state: {} });
-  }
-}, [location]);
-
+  }, [location, navigate]);
 
   return (
     <>
-      <section id="hero"><Hero /></section> {/* ✅ Fixed here */}
+      <section id="hero"><Hero /></section>
       <section id="about"><About /></section>
       <section id="skills"><Skills /></section>
       <section id="projects"><Projects /></section>

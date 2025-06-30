@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
    {
   icon: Mail, // You can import Mail icon from Lucide or any icon lib you're using
   label: 'Email',
-  href: 'https://mail.google.com/mail/?view=cm&to=suniyashi@gmail.com',
+  href: 'https://mail.google.com/mail/?view=cm&to=siyashibu.56@gmail.com',
   color: 'hover:text-red-500' // You can use any Tailwind color
 }
 

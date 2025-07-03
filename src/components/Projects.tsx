@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Code, BrainCircuit, Landmark} from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 
 interface Project {
   id: number;
@@ -11,9 +11,9 @@ interface Project {
   features: string[];
   githubUrl: string;
   liveUrl: string;
+  showLiveDemo?: boolean;
   year: string;
 }
-
 
 const Projects: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -29,6 +29,7 @@ const Projects: React.FC = () => {
       features: ['Trend Analysis', 'Influencer Tracking', 'Real-time Data'],
       githubUrl: 'https://github.com/SeiaShibu/fashion-influence',
       liveUrl: '#',
+      showLiveDemo: true,
       year: '2025',
     },
     {
@@ -41,6 +42,7 @@ const Projects: React.FC = () => {
       features: ['Fake News Detection', 'Explainable AI', 'Accuracy Metrics'],
       githubUrl: 'https://github.com/SeiaShibu/FAKE-NEWS-DECTECTOR',
       liveUrl: '#',
+      showLiveDemo: false,
       year: '2024',
     },
     {
@@ -53,11 +55,12 @@ const Projects: React.FC = () => {
       features: ['Upload Recipes', 'Ingredient Filter', 'User Profiles'],
       githubUrl: 'https://github.com/SeiaShibu/RECIPE-MANAGEMENT-SYSTEM',
       liveUrl: 'https://github.com/SeiaShibu/RECIPE-MANAGEMENT-SYSTEM',
+      showLiveDemo: false,
       year: '2025',
     },
     {
       id: 4,
-      title: 'Autism predicting system',
+      title: 'Autism Predicting System',
       description: 'AI-based system to assist early detection of autism using behavioral data.',
       image: 'https://images.pexels.com/photos/4101143/pexels-photo-4101143.jpeg?auto=compress&cs=tinysrgb&w=800',
       category: 'ai',
@@ -65,6 +68,7 @@ const Projects: React.FC = () => {
       features: ['Prediction', 'Report Generation', 'Explainable Insights'],
       githubUrl: 'https://github.com/SeiaShibu/Autism-predicting-system',
       liveUrl: '#',
+      showLiveDemo: false,
       year: '2025',
     },
     {
@@ -75,21 +79,22 @@ const Projects: React.FC = () => {
       category: 'fullstack',
       technologies: ['Python', 'Flask', 'XAI', 'Pandas'],
       features: ['Loan Prediction', 'SHAP Explanation', 'Data Dashboard'],
-      githubUrl: 'https://github.com/SeiaShibu/loan-predicting-system',
-      liveUrl: '#',
-      year: '2023',
+      githubUrl: 'https://github.com/SeiaShibu/AI-loan-pedicting-system',
+      liveUrl: 'https://seiashibu.github.io/AI-loan-pedicting-system/',
+      showLiveDemo: true,
+      year: '2024',
     },
     {
       id: 6,
       title: 'AI for Marine Ecosystem Conservation',
-      description: ' AI-powered prediction system to analyze pollution levels and recommend conservation strategies',
-
+      description: 'AI-powered prediction system to analyze pollution levels and recommend conservation strategies.',
       image: 'https://www.alfalaval.in/globalassets/images/local/colombia/marine-2020-640x360.jpg',
       category: 'fullstack',
       technologies: ['React', 'Express', 'Node.js', 'MongoDB'],
       features: ['Sensor Data Visualization', 'Marine Alerts', 'Geo Tracking'],
       githubUrl: 'https://github.com/SeiaShibu/AI-for-Marine-Ecosystem-Conservation',
       liveUrl: '#',
+      showLiveDemo: false,
       year: '2024',
     },
     {
@@ -98,15 +103,15 @@ const Projects: React.FC = () => {
       description: 'To showcase talent and sell and earn it.',
       image: 'https://images.pexels.com/photos/6476259/pexels-photo-6476259.jpeg?auto=compress&cs=tinysrgb&w=800',
       category: 'fullstack',
-      technologies: ['React', 'Tailwind', 'js','Nodejs/express','MongoDB'],
+      technologies: ['React', 'Tailwind', 'js', 'Nodejs/express', 'MongoDB'],
       features: ['Responsive Design', 'Project Filtering', 'Dark Mode'],
-      githubUrl: '#',
+      githubUrl: 'https://github.com/SeiaShibu/ShowCase',
       liveUrl: '#',
+      showLiveDemo: false,
       year: '2025',
-    }
+    },
   ];
 
-  
   const filteredProjects = activeFilter === 'all'
     ? projects
     : projects.filter(project => project.category === activeFilter);
@@ -114,19 +119,14 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
             A showcase of my work across AI/ML, full-stack development, and real-world problem solving.
           </p>
-
-          {/* Filter Buttons */}
-          
         </div>
 
-        {/* Project Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <div
@@ -175,23 +175,32 @@ const Projects: React.FC = () => {
                 </div>
 
                 <div className="flex gap-3">
+                  {project.showLiveDemo && (
+                    <a
+                      href={project.liveUrl}
+                      className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transform hover:scale-105 transition-all"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </a>
+                  )}
                   <a
                     href={project.githubUrl}
+                    className="inline-flex items-center justify-center gap-2 border-2 border-gray-200 text-gray-700 py-3 px-4 rounded-lg font-medium hover:border-gray-300 hover:bg-gray-50 transform hover:scale-105 transition-all"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 border-2 border-gray-200 text-gray-700 py-3 px-4 rounded-lg font-medium hover:border-gray-300 hover:bg-gray-50 transform hover:scale-105 transition-all"
                   >
                     <Github size={16} />
                     Code
                   </a>
-                 
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* View All Button */}
         <div className="text-center mt-12">
           <a
             href="https://github.com/SeiaShibu"

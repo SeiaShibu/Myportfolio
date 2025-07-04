@@ -46,7 +46,7 @@ Transforming data into intelligence. Developing smart, scalable solutions with a
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-16">
               <a
-                href="RESUME_SEIASHIBU.pdf"
+                href="SEIAS_RESUME.pdf"
                 download
                 className="group bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
               >

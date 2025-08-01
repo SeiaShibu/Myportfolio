@@ -15,7 +15,7 @@ const blogPosts = [
 
   {
     title: '😩 I Tried Debugging at 2AM — Here\'s What I Learned (Besides Crying)',
-    date: 'April 3, 2025',
+    date: 'july 13, 2025',
     path: '/blogs/debugging-at-2am'
 ,
     gif: 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3l5b3dxc2c0bTU2dzZqZXNvZDBrdjl1Mnp2bDYyb3hwNmg2NWI0MCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Zt7MgZmcneEtdGm2bK/giphy.gif',
@@ -40,7 +40,7 @@ const blogPosts = [
   },
   {
     title: '        🎨 How I Built My Developer Portfolio Using React + TailwindCSS',
-    date: 'June 16, 2025',
+    date: 'may 5, 2025',
     path: 'tailwind-portfolio-fail',
     gif: 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2F4YXBoYjU3bHVuM2Y0czdlcTJkZjZ2NGRkN3E2OXFtZ2RxbzRrOCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l3vR85PnGsBwu1PFK/giphy.gif',
     content: `

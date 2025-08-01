@@ -68,7 +68,6 @@ const BlogPostDSA: React.FC = () => {
           </p>
 
           <p className="italic text-indigo-600">
-            "Late night coding is romantic... until you hit a segmentation fault."
           </p>
         </div>
 

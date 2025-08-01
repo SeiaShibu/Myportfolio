@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'Github link:https://github.com/SeiaShibu',
+      href: 'Github link:https://github.com/SeiaShibu?tab=repositories',
       color: 'hover:text-gray-900'
     },
     {

@@ -236,7 +236,7 @@ const Projects: React.FC = () => {
 
         <div className="text-center mt-12">
           <a
-            href="https://github.com/SeiaShibu"
+            href="https://github.com/SeiaShibu?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-8 py-4 rounded-full font-medium hover:bg-gray-200 transform hover:scale-105 transition-all"

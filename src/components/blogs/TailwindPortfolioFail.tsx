@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom'; // ✅ Added import
 
 const MyPortfolioExperience: React.FC = () => {
   return (
@@ -73,12 +74,14 @@ const MyPortfolioExperience: React.FC = () => {
       </p>
 
       {/* Back link */}
-      <a
-        href="/blogs"
-        className="inline-block mt-6 text-blue-600 hover:underline"
-      >
-        ← Back to Blogs
-      </a>
+      
+         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                 <Link to="/blogs" className="inline-block text-white bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-full shadow">
+                   ← Back to Blogs
+                 </Link>
+       
+       
+               </div>
     </div>
   );
 };

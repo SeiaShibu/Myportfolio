@@ -68,7 +68,7 @@ Transforming data into intelligence. Developing smart, scalable solutions with a
                 <div className="w-full h-full rounded-full bg-white p-4">
                   <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
                     <img
-  src="https://i.ibb.co/Q3j8h7gF/photo.jpg"
+  src="https://i.ibb.co/8DPn3JLQ/Whats-App-Image-2025-08-01-at-10-48-33-d088d88d-1.jpg"
   alt="Seia Shibu"
   className="w-full h-full object-cover rounded-full"
 />

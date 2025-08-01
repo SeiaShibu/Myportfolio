@@ -3,6 +3,17 @@ import { Link } from 'react-router-dom';
 
 const blogPosts = [
   {
+  title: '📚 Studying DSA at Midnight Was a Bold Move — Here\'s How It Went',
+  date: 'August 1, 2025',
+  path: '/blogs/studying-dsa-at-midnight',
+  gif: 'https://media.giphy.com/media/L95W4wv8nnb9K/giphy.gif',
+  content: `
+     Midnight. Fan spinning. Spotify playing lofi like it’s a coping mechanism. I stare at a LeetCode “medium” problem that looks suspiciously like a PhD thesis. It’s me vs recursion now. No friends, just function calls and backtracking
+  `,
+  tech: ['LeetCode', 'DP', 'Recursion', 'Notion'],
+},
+
+  {
     title: '😩 I Tried Debugging at 2AM — Here\'s What I Learned (Besides Crying)',
     date: 'April 3, 2025',
     path: '/blogs/debugging-at-2am'

@@ -20,6 +20,50 @@ const Projects: React.FC = () => {
 
   const projects: Project[] = [
     {
+  id: 9,
+  title: 'Real-time Air Quality Index (AQI) Predictor',
+  description: 'A full-stack AI-powered application that predicts AQI in real-time based on user-input pollutant levels. Built with Flask, Scikit-learn, and a responsive frontend.',
+  image: 'https://onetreeplanted.org/cdn/shop/articles/nature_facts_2000x.jpg?v=1705008496', // Replace with the actual image if needed
+  category: 'fullstack',
+  technologies: ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript', 'Scikit-learn'],
+  githubUrl: 'https://github.com/SeiaShibu/Real-Time-AQI-Predictor', // Update if needed
+  liveUrl: 'https://real-time-air-quality-index-system-jszvhulvpkhdbzdtfp5kdh.streamlit.app/', // Replace with actual deployed URL
+  showLiveDemo: true,
+  year: '2025',
+  features: [
+    'Real-time AQI prediction based on user inputs of key pollutants',
+    'Trained machine learning model using Scikit-learn',
+    'Responsive and user-friendly frontend interface',
+    'White-themed input fields and buttons for clean UI',
+    'Deployed live with seamless backend integration',
+    'Includes multiple pollutant fields like PM2.5, NO2, O3, etc.',
+    'Built using Flask for backend and Python ML models',
+    'Fast and lightweight model loading via .pkl files'
+  ]
+},
+
+  {
+  id: 8,
+  title: 'IMGpop – AI Image Generator',
+  description: 'A full-featured AI-powered image generation and editing tool built with Flask and Bria API. From generating HD images to erasing elements and creating lifestyle product shots, IMGpop empowers creatives with next-gen tools.',
+  image: 'https://cdn.prod.website-files.com/655741af3f04e006606d26ad/67b36f4aeb76704e26a398a5_2563e6f4-3ff7-4f1e-abb2-1d72bef487fd.jpg',
+  category: 'AI',
+  technologies: ['Flask', 'Bria AI API', 'HTML/CSS', 'JavaScript'],
+  features: [
+    'Text-to-Image Generation',
+    'Product Lifestyle Shots',
+    'Packshot & Shadow Editor',
+    'Generative Fill & Erase Tools',
+    'Prompt Enhancer',
+    'Responsive UI'
+  ],
+  githubUrl: 'https://github.com/SeiaShibu/IMAGE-POP-GENERATOR',
+  liveUrl: 'https://art-pop-ai-image-generator.onrender.com',
+  showLiveDemo: true,
+  year: '2025',
+},
+
+    {
       id: 1,
       title: 'Fashion Influence Platform',
       description: 'A web app that tracks fashion trends using influencer analysis.',
@@ -31,6 +75,19 @@ const Projects: React.FC = () => {
       liveUrl: 'https://seiashibu.github.io/Trendsetter-fashion-influence-website/',
       showLiveDemo: true,
       year: '2025',
+    },
+     {
+      id: 5,
+      title: 'Smart Loan Approval System',
+      description: 'Loan approval system using explainable AI to reduce financial bias.',
+      image: 'https://images.pexels.com/photos/4386392/pexels-photo-4386392.jpeg?auto=compress&cs=tinysrgb&w=800',
+      category: 'fullstack',
+      technologies: ['Python', 'Flask', 'XAI', 'Pandas'],
+      features: ['Loan Prediction', 'SHAP Explanation', 'Data Dashboard'],
+      githubUrl: 'https://github.com/SeiaShibu/AI-loan-pedicting-system',
+      liveUrl: 'https://seiashibu.github.io/AI-loan-pedicting-system/',
+      showLiveDemo: true,
+      year: '2024',
     },
     {
       id: 2,
@@ -71,32 +128,8 @@ const Projects: React.FC = () => {
       showLiveDemo: false,
       year: '2025',
     },
-    {
-      id: 5,
-      title: 'Smart Loan Approval System',
-      description: 'Loan approval system using explainable AI to reduce financial bias.',
-      image: 'https://images.pexels.com/photos/4386392/pexels-photo-4386392.jpeg?auto=compress&cs=tinysrgb&w=800',
-      category: 'fullstack',
-      technologies: ['Python', 'Flask', 'XAI', 'Pandas'],
-      features: ['Loan Prediction', 'SHAP Explanation', 'Data Dashboard'],
-      githubUrl: 'https://github.com/SeiaShibu/AI-loan-pedicting-system',
-      liveUrl: 'https://seiashibu.github.io/AI-loan-pedicting-system/',
-      showLiveDemo: true,
-      year: '2024',
-    },
-    {
-      id: 6,
-      title: 'AI for Marine Ecosystem Conservation',
-      description: 'AI-powered prediction system to analyze pollution levels and recommend conservation strategies.',
-      image: 'https://www.alfalaval.in/globalassets/images/local/colombia/marine-2020-640x360.jpg',
-      category: 'fullstack',
-      technologies: ['React', 'Express', 'Node.js', 'MongoDB'],
-      features: ['Sensor Data Visualization', 'Marine Alerts', 'Geo Tracking'],
-      githubUrl: 'https://github.com/SeiaShibu/AI-for-Marine-Ecosystem-Conservation',
-      liveUrl: '#',
-      showLiveDemo: false,
-      year: '2024',
-    },
+    
+ 
     {
       id: 7,
       title: 'ShowCase',

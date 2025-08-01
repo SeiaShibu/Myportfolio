@@ -74,7 +74,7 @@ const Header: React.FC = () => {
             onClick={() => handleNavClick({ id: 'hero', type: 'scroll' })}
             className="text-2xl font-bold text-gray-900 cursor-pointer hover:text-blue-600 transition-colors"
           >
-            {/* Add logo or text here if needed */}
+            {/* Add logo o text here if needed */}
             
           </div>
 

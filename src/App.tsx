@@ -10,6 +10,9 @@ import BlogsPage from './pages/Blogs';
 import DebuggingAt2AM from './components/blogs/DebuggingAt2AM';
 import ChatGPTCareerAdvice from './components/blogs/ChatGPTCareerAdvice';
 import TailwindPortfolioFail from './components/blogs/TailwindPortfolioFail';
+import BlogPostDSA from './components/blogs/BlogPostDSA'; // adjust path if needed
+
+<Route path="/blogs/studying-dsa-at-midnight" element={<BlogPostDSA />} />
 
 const App: React.FC = () => {
   return (
@@ -26,6 +29,8 @@ const App: React.FC = () => {
         <Route path="/blogs/debugging-at-2am" element={<DebuggingAt2AM />} />
         <Route path="/blogs/chatgpt-career-advice" element={<ChatGPTCareerAdvice />} />
         <Route path="/blogs/tailwind-portfolio-fail" element={<TailwindPortfolioFail />} />
+        <Route path="/blogs/studying-dsa-at-midnight" element={<BlogPostDSA />} />
+
       </Routes>
 
       <Footer />

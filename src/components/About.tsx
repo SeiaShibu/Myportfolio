@@ -20,7 +20,7 @@ const About: React.FC = () => {
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p className="text-lg">
                   ✨ Hi, I'm <span className="font-semibold text-blue-600">Seia Shibu</span>, 
-                  a third-year engineering student from RNS Institute of Technology, Bengaluru, 
+                  a final year engineering student from RNS Institute of Technology, Bengaluru, 
                   specializing in Artificial Intelligence and Data Science (Class of 2026).
                 </p>
                 <p className="text-lg">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // ✅ Added import
 
 const BlogPost1: React.FC = () => {
   return (
@@ -66,12 +67,14 @@ const BlogPost1: React.FC = () => {
 
         {/* Back button */}
         <div className="mt-12">
-          <a
-            href="/blogs"
-            className="inline-block text-blue-600 font-semibold hover:underline hover:text-blue-800 transition"
-          >
+        </div>
+
+        <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <Link to="/blogs" className="inline-block text-white bg-indigo-600 hover:bg-indigo-700 px-6 py-2 rounded-full shadow">
             ← Back to Blogs
-          </a>
+          </Link>
+
+
         </div>
       </div>
     </div>

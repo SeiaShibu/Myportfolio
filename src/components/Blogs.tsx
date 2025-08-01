@@ -33,7 +33,14 @@ const blogs: BlogPost[] = [
     date: 'April 2025',
     slug: 'flask-recipe-manager-app',
   },
+  {
+    title: '📚 Studying DSA at Midnight Was a Bold Move',
+    description: 'What started as a “quick revision” of recursion turned into a deep dive through arrays, trees, and a slight emotional breakdown.',
+    date: 'August 2025',
+    slug: 'studying-dsa-midnight',
+  },
 ];
+
 
 const Blogs: React.FC = () => {
   return (

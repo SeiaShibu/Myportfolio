@@ -67,8 +67,6 @@ const BlogPostDSA: React.FC = () => {
             DSA won’t click in a day — but one day, it will. The key? Consistency, patience, and not throwing your laptop.
           </p>
 
-          <p className="italic text-indigo-600">
-          </p>
         </div>
 
         <div className="mt-10">

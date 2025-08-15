@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           {/* Text Column */}
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-              Hey! I'm <br/><span className="text-blue-600">Seia Shibu</span> <span className="text-4xl">👩‍💻</span>
+              Hey! I'm <br/><span className="text-blue-600">Seias Shibu</span> <span className="text-4xl">👩‍💻</span>
             </h1>
             <h2 className="text-xl sm:text-2xl font-medium text-gray-700 mb-6">
 AI & Data Science Engineering Student | Future-Ready Technologist | Turning Ideas into Intelligence
@@ -46,7 +46,7 @@ Transforming data into intelligence. Developing smart, scalable solutions with a
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-16">
               <a
-                href="SEIAS_RESUME.pdf"
+                href="SEIA__SHIBU.pdf"
                 download
                 className="group bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
